@@ -1,0 +1,43 @@
+{
+  "name": "pnpm-turborepo-project",
+  "private": true,
+  "engines": {
+    "node": "16",
+    "pnpm": "6"
+  },
+  "volta": {
+    "node": "16.13.1"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "npmClient": "pnpm",
+    "pipeline": {
+      "app#build": {
+        "outputs": [
+          ".next/**",
+          "dist/**"
+        ]
+      },
+      "app#generate": {
+        "dependsOn": ["app#build"]
+      },
+      "app#dev": {
+        "cache": false
+      },
+      "app#start": {
+        "dependsOn": ["app#build"]
+      },
+      "e2e#run": {
+        "dependsOn": ["app#generate"]
+      },
+      "lint": {}
+    }
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "pnpm": "6.25.1",
+    "turbo": "1.0.25"
+  }
+}
