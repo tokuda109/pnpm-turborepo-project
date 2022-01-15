@@ -13,21 +13,21 @@ $ npx pnpm i
 #### Build / Generate
 
 ```
-$ turbo run app#build
-$ turbo run app#generate
+$ pnpm turbo run app#build
+$ pnpm turbo run app#generate
 ```
 
 #### Dev / Start
 
 ```
-$ turbo run app#dev
-$ turbo run app#start
+$ pnpm turbo run app#dev
+$ pnpm turbo run app#start
 ```
 
 ### E2E
 
 ```
-$ turbo run e2e#run
+$ pnpm turbo run e2e#run
 ```
 
 ### Lint
@@ -35,5 +35,5 @@ $ turbo run e2e#run
 Run lint script across all workspaces:
 
 ```
-$ turbo run lint
+$ pnpm turbo run lint
 ```

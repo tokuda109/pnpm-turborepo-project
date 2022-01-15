@@ -13,13 +13,11 @@
     "npmClient": "pnpm",
     "pipeline": {
       "app#build": {
-        "outputs": [
-          ".next/**",
-          "dist/**"
-        ]
+        "outputs": ["apps/app/.nuxt/**"]
       },
       "app#generate": {
-        "dependsOn": ["app#build"]
+        "dependsOn": ["app#build"],
+        "outputs": ["dist/**"]
       },
       "app#dev": {
         "cache": false
@@ -38,6 +36,6 @@
   },
   "devDependencies": {
     "pnpm": "6.25.1",
-    "turbo": "1.0.25"
+    "turbo": "1.0.28"
   }
 }

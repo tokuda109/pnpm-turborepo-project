@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "run": "pnpm exec start-server-and-test 'pnpm exec serve ../../dist' http://localhost:3000 'cypress run'",
+    "run": "pnpm start-server-and-test 'pnpm serve ../../dist' http://localhost:3000 'cypress run'",
     "lint": "echo e2e#lint"
   },
   "devDependencies": {
